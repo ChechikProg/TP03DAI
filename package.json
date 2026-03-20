@@ -1,0 +1,21 @@
+{
+  "name": "tp03dai",
+  "version": "1.0.0",
+  "description": "\"# TP03DAI\"",
+  "homepage": "https://github.com/ChechikProg/TP03DAI#readme",
+  "bugs": {
+    "url": "https://github.com/ChechikProg/TP03DAI/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChechikProg/TP03DAI.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    ,"start": "node index.js"
+  }
+}
