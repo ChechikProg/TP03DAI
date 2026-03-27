@@ -9,7 +9,11 @@ function agregarProducto(nombre,precio)
 {
 let lectura = fs.readFileSync('productos.json','utf-8');
 let productos = JSON.parse(lectura);
-let nuevoProducto = { lectura.length + 1,  }
+let nuevoProducto = { id: productos.length + 1, nombre, precio };
+productos.push(nuevoProducto);
 
+fs.writeFileSync("productos.json", JSON.stringify(productos, null, 2), "utf-8");
+console.log("Producto guardado exitosamente");
 
 }
+agregarProducto("Mouse", 12000);
