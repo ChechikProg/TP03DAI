@@ -128,5 +128,15 @@
     "id": 26,
     "nombre": "Mouse",
     "precio": 12000
+  },
+  {
+    "id": 27,
+    "nombre": "Mouse",
+    "precio": 12000
+  },
+  {
+    "id": 28,
+    "nombre": "Mouse",
+    "precio": 12000
   }
 ]
