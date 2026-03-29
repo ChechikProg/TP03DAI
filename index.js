@@ -28,3 +28,24 @@ console.log("Fecha actual:", fecha);
 console.log("Hora actual:", hora);
 }
 mostrarFechaYHora();
+
+//ejercicio 4
+import axios from "axios";
+
+async function obtenerPais(nombrePais) {
+  try {
+const response = await axios.get(`https://restcountries.com/v3.1/name/${nombrePais}`);    
+const pais = response.data[0];
+
+console.log("País:", pais.name.common);
+console.log("Capital:", pais.capital[0]);
+console.log("Region:", pais.region);
+console.log("Poblacinn:", pais.population);
+
+} catch (error) {
+console.log("Error al obtener el pais");
+}
+}
+obtenerPais("Mozambique");
+
+//ejercicio 5
