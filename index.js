@@ -47,5 +47,52 @@ console.log("Error al obtener el pais");
 }
 }
 obtenerPais("Mozambique");
-
 //ejercicio 5
+
+function buscarProducto(nombre) {
+  const data = fs.readFileSync("productos.json", "utf-8");
+  const productos = JSON.parse(data);
+
+  const producto = productos.find(p => p.nombre.toLowerCase() === nombre.toLowerCase());
+
+  if (producto) {
+    console.log("Producto encontrado");
+    console.log("Nombre:", producto.nombre);
+    console.log("Precio:", producto.precio);
+  } else {
+    console.log("Producto no encontrado");
+  }
+}
+
+// Ejemplo
+buscarProducto("Micrófono USB");
+//ejercicio 6
+
+function generarCSV() {
+  const data = fs.readFileSync("productos.json", "utf-8");
+  const productos = JSON.parse(data);
+
+  let csv = "nombre,precio\n";
+
+  productos.forEach(p => {
+    csv += `${p.nombre},${p.precio}\n`;
+  });
+
+  fs.writeFileSync("productos.csv", csv);
+
+  console.log("Archivo CSV generado correctamente");
+}
+
+// Ejecutar
+generarCSV();
+//ejercicio 7
+let contador = 1;
+const intervalo = setInterval(() => {
+  console.log(contador);
+  contador++;
+}, 1000);
+
+setTimeout(() => {
+  clearInterval(intervalo);
+  console.log("Fin del contador");
+}, 11000);
